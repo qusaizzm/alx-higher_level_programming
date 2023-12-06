@@ -1,10 +1,10 @@
 #!/usr/bin/python3
-def complex_delete(my_dict, value):
-    keys_to_del = []
-    for key in my_dict:
-        if my_dict[key] == value:
-            keys_to_del.append(key)
-    for key in keys_to_del:
-        del my_dict[key]
-    return my_dict
-
+def complex_delete(a_dictionary, value):
+    # Use dictionary comprehension to create a new dictionary without the specified keys
+    updated_dict = {
+            key:
+            val for key, 
+            val in a_dictionary.items() 
+            if val != value
+            }
+    return updated_dict
